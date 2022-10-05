@@ -1,0 +1,85 @@
+body{
+  margin-top: 6em;
+}
+
+h1{
+  width: 50%;
+}
+
+.login-feature {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  float:right;
+  background-color: #e9e9e9;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.login-feature h3{
+  float: right;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.login-feature a {
+  float: right;
+  display: inline;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.login-feature a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.login-feature a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+li{
+  display: flex;
+  width: 100%;
+}
+
+li form{
+  display: flex;
+  width:100%;
+  align-items: center;
+}
+
+.movie_title{
+  width: 40%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  display: flex;
+}
+
+li .year{
+  width:20%;
+  padding-left: 1em;
+}
+
+
+ul, .searchform, h2 {
+  width:50%;
+  padding: 0 0 0 1em;
+  margin-left: 0;
+  display: inline-block;
+  *display: inline;
+}
+
+.list, h2 {
+  position: fixed;
+  right: 0;
+}

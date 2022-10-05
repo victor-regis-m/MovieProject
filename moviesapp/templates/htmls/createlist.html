@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <title>HTML 5 Boilerplate</title>
+  </head>
+  <body>
+  <!-- Navbar -->
+  <div class="login-feature">
+    {% if request.user.is_authenticated %}
+    <h3>Welcome, {{request.user.username}} <a href="/logout/">Logout</a></h3>
+    {% else %}
+    <h3>You are not logged in <a href="/login/auth0">Login</a></h3>
+    {% endif %}
+  </div>
+  <h1>Create List</h1>
+  <form action="/createlist" method="post"> {% csrf_token %}
+    <label for="listname">Name your list: </label>
+    <br>
+    <input type="text" name="listname" id="listname" value = "{{listname}}">
+    <br>
+    <br>
+    <button type="submit" name="action">Search Movies</button>
+  </form>
+  {% if list_exists %}
+  <h2 class = "warning">List with name "{{listname}}" already exists!</h2>
+  {% endif %}
+  <br>
+  </body>
+</html>
